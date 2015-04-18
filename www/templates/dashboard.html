@@ -1,53 +1,69 @@
 <ion-view view-title="Ecofilm Festival 2015" class="eco-bg2">
-  <ion-content class="eco-bg-fx1" padding="true">  	
-  	  	
-  	<div class="row mainLogo hide" ng-init="getHeader()">
-  		<div class="col"></div>
-  		<div class="col">
-  			<img ng-src="./img/logo-03.png" />
-  		</div>
-  		<div class="col"></div>
-  	</div>
+<ion-content class="eco-bg-fx1" padding="true">  	
 
-  	<div class="row">
-  		<div class="col col-50 eco-col-left">
-  			<div class="weather hide" id="weather" ng-init="getWeather('116545','weather')"><ion-spinner icon="ripple "></ion-spinner><br /><span class="eco-loading">Loading...</span></div>
-		</div>
-  		
-  		<div class="col col-50 eco-col-right">
-  			<div class="weather" id="weather2" ng-init="getWeather('124162','weather2')"><ion-spinner icon="ripple "></ion-spinner><br /><span class="eco-loading">Loading...</span></div>
-  		</div>
+<div class="row mainLogo hide" ng-init="getHeader()">
+  <div class="col"></div>
+  <div class="col">
+    <!-- <img ng-src="./img/logo-03.png" /> -->
+    <object type="image/svg+xml" data="img/logo-wx200.svg">
+      <param name="src" value="img/logo-wx200.svg">
+    </object>
+  </div>
+  <div class="col"></div>
+</div>
 
-	</div>
+<div class="divider" style="height:10px;"></div>  
 
-	<div class="divider" style="height:10px;"></div>
-  
-	<div class="row">
-    <div class="col col-20"></div>
-  	<div class="col">
-      <button class="button button-outline button-block button-light icon-left ion-ios-list-outline text-center">
-        &nbsp;Convocatoria&nbsp;<em class="eco-muted">Calling</em>
-      </button>
-    </div>
-    <div class="col col-20"></div>
-	</div>
+<div class="row">
+  <div class="col col-50 eco-col-left">
+   <div class="weather hide" id="weather" ng-init="getWeather('116545','weather')"><ion-spinner icon="ripple "></ion-spinner><br /><span class="eco-loading">Loading...</span></div>
+ </div>  		
+ <div class="col col-50 eco-col-right">
+   <div class="weather" id="weather2" ng-init="getWeather('124162','weather2')"><ion-spinner icon="ripple "></ion-spinner><br /><span class="eco-loading">Loading...</span></div>
+ </div>
+</div>
+
+<div class="divider" style="height:10px;"></div>  
+
+<div class="row">
+  <div class="col col-20"></div>
+  <div class="col">
+    <button class="button button-outline button-block button-light icon-left ion-ios-list-outline text-center">
+      &nbsp;Convocatoria&nbsp;<em class="eco-muted">Calling</em>
+    </button>
+  </div>
+  <div class="col col-20"></div>
+</div>
+
+<div class="divider" style="height:20px;"></div>
+
+<ion-list>
+<ion-item class="item item-red-light">
+Alertas ECOFILM
+<span class="badge badge-dark">7</span>
+</ion-item>
+<ion-item class="item item-icon-left item-trns70 text-left item-icon-right" ng-repeat="(key, value) in ['cloud','rainy','mist','windysnowcloud']">
+<i class="icon icon-{{value}}"></i>  
+<span class="calm">{{key}}</span>&nbsp;<span class="muted">{{value}}</span><br/><p class="eco-muted">Subtitulo de {{value}}</p>
+<i class="icon ion-ios-arrow-thin-right"></i>
+</ion-item>
+</ion-list>
+
+<div class="divider" style="height:20px;"></div>
+
+<ion-list>
+<ion-item class="item item-calm">
+Alertas ECOFILM
+<span class="badge badge-dark">7</span>
+</ion-item>
+<ion-item class="item item-icon-left item-trns70 text-left item-icon-right" ng-repeat="(key, value) in ['cloud','rainy']">
+<i class="icon icon-{{value}}"></i>  
+<span class="calm">{{key}}</span>&nbsp;<span class="muted">{{value}}</span><br/><p class="eco-muted">Subtitulo de {{value}}</p>
+<i class="icon ion-ios-arrow-thin-right"></i>
+</ion-item>
+</ion-list>
 
 
-	<div class="divider" style="height:20px;"></div>
-  <<ion-list>
-    <ion-item class="item item-red-light">
-      Alertas ECOFILM
-      <span class="badge badge-dark">7</span>
-    </ion-item>
-    <ion-item class="item item-icon-left item-trns70 text-left item-icon-right" ng-repeat="(key, value) in ['cloud','rainy','mist','windysnowcloud','drizzle','snowy','sleet','moon']">
-          <i class="icon icon-{{value}}"></i>  
-          <span class="calm">{{key}}</span>&nbsp;<span class="muted">{{value}}</span><br/><p class="eco-muted">Subtitulo de {{value}}</p>
-          <i class="icon ion-ios-arrow-thin-right"></i>
-    </ion-item>
-  </ion-list>
-  
-	
-	
-      	
-  </ion-content>
+
+</ion-content>
 </ion-view>
